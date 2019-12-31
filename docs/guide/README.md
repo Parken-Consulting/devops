@@ -1,3 +1,5 @@
+# CentOS 7 - Basic Setup
+
 ### Update OS with to Latest
 
 ```sh
