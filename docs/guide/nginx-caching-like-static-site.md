@@ -21,8 +21,8 @@ mkdir /var/cache/nginx
       # http status codes to cache for 14 days
      proxy_cache_valid 200 301 14d;
 
-      # we can invalidate a page by sending "my-secret-header:true"
-      proxy_cache_bypass $http_my_secret_header;
+      # we can invalidate a page by sending "x-invalidate-cache:true"
+      proxy_cache_bypass $http_x_invalidate_cache;
 
       include proxy_params;
 
@@ -46,4 +46,18 @@ server {
 
       }
  }
+```
+
+## Invalidating Cache
+
+```js
+
+const rp = require('request-promise');
+
+rp({
+  url: 'https://example.com/home',
+  headers: {
+      'x-invalidate-cache' : true
+  }
+})
 ```
