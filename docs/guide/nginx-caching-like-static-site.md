@@ -36,10 +36,14 @@ proxy_headers_hash_bucket_size 128;
 proxy_cache_path /var/cache/nginx levels=1:2 keys_zone=assets_zone:10m inactive=60m;
 proxy_cache_key "$scheme$request_method$host$request_uri";
 
-location / {
-  include teak_proxy_cache.conf;
-  
-  ....
-  
-}
+server {
+      ....
+      
+      location / {
+        include teak_proxy_cache.conf;
+
+        ....
+
+      }
+ }
 ```
