@@ -1,4 +1,10 @@
 
+#### Create a folder
+
+```sh
+mkdir /var/cache/nginx
+```
+
 `/etc/nginx/nginx-cache-like-static-page.conf`
 
 ```sh
