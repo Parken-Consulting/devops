@@ -72,3 +72,19 @@ $http.get('https://example.com/home', {
   }
 })
 ```
+
+## Verify Proxy Cache Enabled
+```js
+const rp = require('request-promise');
+
+exports.check = async () => {
+  const response = await rp({
+    url: 'https://www.checkmycream.com',
+    resolveWithFullResponse: true
+  });
+
+  console.log(response.headers['x-proxy-cache']);
+  return response.headers['x-proxy-cache'] === 'HIT';
+};
+this.check();
+```
