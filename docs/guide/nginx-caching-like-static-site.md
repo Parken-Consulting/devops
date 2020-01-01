@@ -50,12 +50,23 @@ server {
 
 ## Invalidating Cache
 
+**Nodejs**
 ```js
 
 const rp = require('request-promise');
 
 rp({
   url: 'https://example.com/home',
+  headers: {
+      'x-invalidate-cache' : true
+  }
+})
+```
+
+**Angular**
+```js
+
+$http.get('https://example.com/home', {
   headers: {
       'x-invalidate-cache' : true
   }
