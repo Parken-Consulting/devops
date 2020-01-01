@@ -40,7 +40,7 @@ server {
       ....
       
       location / {
-        include teak_proxy_cache.conf;
+        include nginx-cache-like-static-page.conf;
 
         ....
 
