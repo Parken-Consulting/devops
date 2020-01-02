@@ -41,4 +41,4 @@ server {
 ```
 
 ## References:
-- https://www.linuxbabe.com/nginx/setup-nginx-fastcgi-cache
+- [https://www.linuxbabe.com/nginx/setup-nginx-fastcgi-cache](https://www.linuxbabe.com/nginx/setup-nginx-fastcgi-cache)
